@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="5KI-1b-bLg">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="MDNJViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Smiley-Pattern.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zCs-Ql-5hv"/>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JoT-ih-GXi">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="176" id="gUN-Du-sPg"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="actionEndOfEditing:" destination="2" eventType="editingDidEndOnExit" id="gf8-zy-r5d"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DqJ-es-Jet">
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="0dr-Ks-you"/>
+                                    <constraint firstAttribute="height" constant="162" id="wei-po-yEp"/>
+                                </constraints>
+                                <color key="textColor" red="0.14470146207564039" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTu-lB-sy3">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="0dT-H6-5Zp"/>
+                                    <constraint firstAttribute="width" constant="96" id="H7p-96-aES"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <state key="normal" title="Get Jokes" image="GetJokes.png">
+                                    <color key="titleColor" red="0.19607843137254902" green="0.30980392156862746" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionGetJokes:" destination="2" eventType="touchUpInside" id="Klq-yE-q4q"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89277117138853246" green="0.89679092596043464" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zCs-Ql-5hv" firstAttribute="centerX" secondItem="DqJ-es-Jet" secondAttribute="centerX" type="default" id="0Ex-tt-CUe"/>
+                            <constraint firstAttribute="bottom" secondItem="dTu-lB-sy3" secondAttribute="bottom" constant="71" id="EpU-H8-X8K"/>
+                            <constraint firstItem="JoT-ih-GXi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="GBH-SE-Vpw"/>
+                            <constraint firstItem="zCs-Ql-5hv" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="M42-sy-Gyr"/>
+                            <constraint firstItem="dTu-lB-sy3" firstAttribute="centerX" secondItem="JoT-ih-GXi" secondAttribute="centerX" type="default" id="OHo-jA-oXy"/>
+                            <constraint firstItem="JoT-ih-GXi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="75" id="OwA-EB-kAa"/>
+                            <constraint firstItem="zCs-Ql-5hv" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="aAb-WR-TZg"/>
+                            <constraint firstItem="zCs-Ql-5hv" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="d7X-mN-60T"/>
+                            <constraint firstItem="zCs-Ql-5hv" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="dGN-PX-0NO"/>
+                            <constraint firstItem="DqJ-es-Jet" firstAttribute="top" secondItem="3" secondAttribute="top" constant="65" id="gqe-O9-l9A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ako-97-slQ" colorLabel="IBBuiltInLabel-Blue">
+                        <barButtonItem key="rightBarButtonItem" title="Change Name" id="4Te-8v-bv5">
+                            <connections>
+                                <action selector="btnChangeName:" destination="2" id="gT7-r5-biQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="btnJokes" destination="dTu-lB-sy3" id="WLe-tb-o7O"/>
+                        <outlet property="txtName" destination="JoT-ih-GXi" id="YUw-O9-KLg"/>
+                        <outlet property="txtView" destination="DqJ-es-Jet" id="iNc-u1-9A4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771" y="88"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="inB-c2-oEt">
+            <objects>
+                <navigationController id="5KI-1b-bLg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7Kt-Ln-K1C">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="VKU-k2-Aj3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKk-Mi-f4L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GetJokes.png" width="110" height="110"/>
+        <image name="Smiley-Pattern.jpg" width="449" height="449"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
